@@ -38,3 +38,39 @@ const filterClickHandler = function (e) {
     }
 };
 $searchButton.addEventListener('click', filterClickHandler);
+
+
+
+//ДЗ на сортировку. Работает только кнопка "по убыванию"
+ const $sortButtonIncr = document.querySelector('.increase');
+
+function sortListIncr() {
+    sortIncr = list.sort();
+    $tbody.innerHTML = '';
+    for (let index = 0; index < sortIncr.length; index++) {
+        const element = sortIncr[index];
+        const $tr = document.createElement('tr');
+        const $tdId = document.createElement('td');
+        const $tdNumber = document.createElement('td');
+        $tdId.innerHTML = element.id;
+        $tdNumber.innerHTML = element.name;
+        $tr.append($tdId, $tdNumber);
+         $tbody.appendChild($tr);
+    }
+ }
+
+ const $sortButtonDecr = document.querySelector('.decrease');
+ function sortListDecr(){
+    sortDecr = list.reverse();
+    $tbody.innerHTML = '';
+    for (let index = 0; index < sortDecr.length; index++) {
+        const element = sortDecr[index];
+        const $tr = document.createElement('tr');
+        const $tdId = document.createElement('td');
+        const $tdNumber = document.createElement('td');
+        $tdId.innerHTML = element.id;
+        $tdNumber.innerHTML = element.name;
+        $tr.append($tdId, $tdNumber);
+         $tbody.appendChild($tr);
+        }
+    }

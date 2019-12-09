@@ -2,6 +2,9 @@ table {
     width: 100%;
     border: 1px solid black ;
 }
+.sortirovka{
+    margin-bottom: 5px;
+}
 .filter {
     margin-bottom: 5px;
 }
